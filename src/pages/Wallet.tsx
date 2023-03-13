@@ -10,10 +10,10 @@ import theme from '../styles/theme.style';
 function Wallet({ navigation }: WalletTabScreenProps<'Wallet'>) {
   return (
     <Shell>
-      <View style={[styles.listItem.totalBalanceContainer]}>
+      <View style={[styles.totalBalanceContainer]}>
         <CircleTotalBalance />
       </View>
-      <View style={[styles.listItem.headerContainer]}>
+      <View style={[common.headingContainer]}>
         <Text style={[common.headingLarge]}>Asset list</Text>
         <Feather
           name="plus-circle"
@@ -23,19 +23,19 @@ function Wallet({ navigation }: WalletTabScreenProps<'Wallet'>) {
         />
       </View>
 
-      <View style={[styles.listContainer]}>
+      <View style={[common.list]}>
         {[...Array(8)].map((_, index) => (
-          <View style={[styles.listItem]} key={index}>
-            <View style={[styles.listItem.assetNameContainer]}>
+          <View style={[common.listItem]} key={index}>
+            <View style={[styles.assetNameContainer]}>
               <Image
                 source={require('../assets/img/coins/lbtc.png')}
                 style={{ width: 24, height: 24 }}
               />
-              <Text style={[styles.listItem.assetName]}>Bitcoin</Text>
+              <Text style={[styles.assetName]}>Bitcoin</Text>
             </View>
-            <View style={[styles.listItem.assetAmountContainer]}>
-              <Text style={[styles.listItem.assetAmount]}>0.00000000</Text>
-              <Text style={[styles.listItem.assetFiatAmount]}>0.00 USD</Text>
+            <View style={[styles.assetAmountContainer]}>
+              <Text style={[styles.assetAmount]}>0.00000000</Text>
+              <Text style={[styles.assetFiatAmount]}>0.00 USD</Text>
             </View>
           </View>
         ))}
@@ -47,50 +47,31 @@ function Wallet({ navigation }: WalletTabScreenProps<'Wallet'>) {
 export default Wallet;
 
 const styles = StyleSheet.create({
-  listContainer: {
-    marginBottom: 16,
-    width: '100%',
-  },
-  listItem: {
+  totalBalanceContainer: {
     alignItems: 'center',
-    backgroundColor: theme.COLOR_SECONDARY,
-    borderRadius: 8,
+    marginBottom: 16,
+  },
+  assetNameContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginTop: 6,
-    padding: 16,
-    totalBalanceContainer: {
-      alignItems: 'center',
-      marginBottom: 16,
-    },
-    headerContainer: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      marginBottom: 12,
-      width: '100%',
-    },
-    assetNameContainer: {
-      flexDirection: 'row',
-      alignItems: 'center',
-    },
-    assetName: {
-      paddingLeft: 10,
-      color: theme.COLOR_TEXT,
-      fontFamily: theme.FONT_MAIN,
-      fontSize: theme.FONT_SIZE_MD,
-    },
-    assetAmountContainer: {
-      flexDirection: 'column',
-    },
-    assetAmount: {
-      color: theme.COLOR_TEXT,
-      fontFamily: theme.FONT_SUB,
-      fontSize: theme.FONT_SIZE_MD,
-    },
-    assetFiatAmount: {
-      color: theme.COLOR_TERTIARY,
-      fontFamily: theme.FONT_SUB_HEADING,
-      fontSize: theme.FONT_SIZE_MD,
-    },
+    alignItems: 'center',
+  },
+  assetName: {
+    paddingLeft: 10,
+    color: theme.COLOR_TEXT,
+    fontFamily: theme.FONT_MAIN,
+    fontSize: theme.FONT_SIZE_MD,
+  },
+  assetAmountContainer: {
+    flexDirection: 'column',
+  },
+  assetAmount: {
+    color: theme.COLOR_TEXT,
+    fontFamily: theme.FONT_SUB,
+    fontSize: theme.FONT_SIZE_MD,
+  },
+  assetFiatAmount: {
+    color: theme.COLOR_TERTIARY,
+    fontFamily: theme.FONT_SUB_HEADING,
+    fontSize: theme.FONT_SIZE_MD,
   },
 } as const);
