@@ -40,6 +40,7 @@ export type ExchangeTabScreenProps<T extends keyof ExchangeStackNavigatorParamLi
 // Settings Tab
 export type SettingsStackNavigatorParamList = {
   Settings: undefined;
+  Account: undefined;
 };
 export type SettingsTabScreenProps<T extends keyof SettingsStackNavigatorParamList> =
   CompositeScreenProps<

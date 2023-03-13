@@ -11,7 +11,7 @@ import theme from '../styles/theme.style';
 
 const menu = {
   general: [
-    { title: 'Account', selectedValue: undefined, link: 'AssetList' },
+    { title: 'Account', selectedValue: undefined, link: 'Account' },
     { title: 'Liquidity providers', selectedValue: undefined, link: 'AssetList' },
     { title: 'L-BTC unit', selectedValue: 'LBTC', link: 'WalletStack' },
     { title: 'Default currency', selectedValue: 'EUR', link: 'WalletStack' },
@@ -53,7 +53,7 @@ const ListItem: React.FC<ListItemProps> = ({ title, selectedValue, link }) => {
   );
 };
 
-const Settings: React.FC<SettingsTabScreenProps<'Settings'>> = () => {
+const SettingsMenu: React.FC<SettingsTabScreenProps<'Settings'>> = () => {
   return (
     <Shell>
       <View style={[common.headingContainer]}>
@@ -76,7 +76,7 @@ const Settings: React.FC<SettingsTabScreenProps<'Settings'>> = () => {
   );
 };
 
-export default Settings;
+export default SettingsMenu;
 
 const styles = StyleSheet.create({
   selectedValueContainer: {

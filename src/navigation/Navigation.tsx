@@ -6,10 +6,11 @@ import React from 'react';
 import { Dimensions } from 'react-native';
 import { Shadow } from 'react-native-shadow-2';
 
+import AccountMenu from '../pages/AccountMenu';
 import AssetList from '../pages/AssetList';
 import Exchange from '../pages/Exchange';
 import Receive from '../pages/Receive';
-import Settings from '../pages/Settings';
+import SettingsMenu from '../pages/SettingsMenu';
 import Wallet from '../pages/Wallet';
 import theme from '../styles/theme.style';
 
@@ -71,7 +72,8 @@ function ExchangeStackComponent() {
 function SettingsStackComponent() {
   return (
     <SettingsStack.Navigator screenOptions={stackScreenOptions}>
-      <SettingsStack.Screen name="Settings" component={Settings} options={mainScreenOptions} />
+      <SettingsStack.Screen name="Settings" component={SettingsMenu} options={mainScreenOptions} />
+      <SettingsStack.Screen name="Account" component={AccountMenu} />
     </SettingsStack.Navigator>
   );
 }
