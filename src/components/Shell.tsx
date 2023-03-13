@@ -4,13 +4,13 @@ import { ScrollView, StyleSheet } from 'react-native';
 
 import theme from '../styles/theme.style';
 
-const Shell: React.FC<any> = ({ children }) => {
+const Shell: React.FC<any> = ({ children, style }) => {
   return (
     <LinearGradient
-      colors={[theme.COLOR_SECONDARY, theme.COLOR_SECONDARY_SHADED]}
+      colors={[theme.COLOR_SECONDARY_BIS, theme.COLOR_SECONDARY_SHADED]}
       style={[styles.gradient]}
     >
-      <ScrollView contentContainerStyle={styles.container}>{children}</ScrollView>
+      <ScrollView contentContainerStyle={[styles.container, style]}>{children}</ScrollView>
     </LinearGradient>
   );
 };

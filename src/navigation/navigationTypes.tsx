@@ -41,6 +41,10 @@ export type ExchangeTabScreenProps<T extends keyof ExchangeStackNavigatorParamLi
 export type SettingsStackNavigatorParamList = {
   Settings: undefined;
   Account: undefined;
+  LiquidityProviders: undefined;
+  Explorers: undefined;
+  Network: undefined;
+  TorProxy: undefined;
 };
 export type SettingsTabScreenProps<T extends keyof SettingsStackNavigatorParamList> =
   CompositeScreenProps<

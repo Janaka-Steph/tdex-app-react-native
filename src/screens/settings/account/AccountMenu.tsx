@@ -4,10 +4,13 @@ import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-import Shell from '../components/Shell';
-import type { SettingsTabScreenProps, WalletTabScreenProps } from '../navigation/navigationTypes';
-import common from '../styles/common.style';
-import theme from '../styles/theme.style';
+import Shell from '../../../components/Shell';
+import type {
+  SettingsTabScreenProps,
+  WalletTabScreenProps,
+} from '../../../navigation/navigationTypes';
+import common from '../../../styles/common.style';
+import theme from '../../../styles/theme.style';
 
 const menu = {
   general: [

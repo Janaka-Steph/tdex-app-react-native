@@ -1,23 +1,26 @@
-import { Entypo } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 import type { Route } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-import Shell from '../components/Shell';
-import type { SettingsTabScreenProps, WalletTabScreenProps } from '../navigation/navigationTypes';
-import common from '../styles/common.style';
-import theme from '../styles/theme.style';
+import Shell from '../../components/Shell';
+import type {
+  SettingsTabScreenProps,
+  WalletTabScreenProps,
+} from '../../navigation/navigationTypes';
+import common from '../../styles/common.style';
+import theme from '../../styles/theme.style';
 
 const menu = {
   general: [
     { title: 'Account', selectedValue: undefined, link: 'Account' },
-    { title: 'Liquidity providers', selectedValue: undefined, link: 'AssetList' },
+    { title: 'Liquidity providers', selectedValue: undefined, link: 'LiquidityProviders' },
     { title: 'L-BTC unit', selectedValue: 'LBTC', link: 'WalletStack' },
     { title: 'Default currency', selectedValue: 'EUR', link: 'WalletStack' },
-    { title: 'Explorers endpoints', selectedValue: undefined, link: 'WalletStack' },
-    { title: 'Network', selectedValue: undefined, link: 'WalletStack' },
-    { title: 'Tor proxy endpoint', selectedValue: undefined, link: 'WalletStack' },
+    { title: 'Explorers endpoints', selectedValue: undefined, link: 'Explorers' },
+    { title: 'Network', selectedValue: undefined, link: 'Network' },
+    { title: 'Tor proxy endpoint', selectedValue: undefined, link: 'TorProxy' },
     { title: 'Deep restoration', selectedValue: undefined, link: 'WalletStack' },
     { title: 'Claim Liquid Bitcoin', selectedValue: undefined, link: 'WalletStack' },
   ],
@@ -43,10 +46,10 @@ const ListItem: React.FC<ListItemProps> = ({ title, selectedValue, link }) => {
         {selectedValue ? (
           <View style={[styles.selectedValueContainer]}>
             <Text style={[styles.selectedValue]}>{selectedValue}</Text>
-            <Entypo name="chevron-right" size={24} color={theme.COLOR_TEXT} />
+            <Feather name="chevron-right" size={22} color={theme.COLOR_TEXT} />
           </View>
         ) : (
-          <Entypo name="chevron-right" size={24} color={theme.COLOR_TEXT} />
+          <Feather name="chevron-right" size={22} color={theme.COLOR_TEXT} />
         )}
       </View>
     </TouchableOpacity>

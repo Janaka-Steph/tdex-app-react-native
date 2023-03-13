@@ -6,12 +6,16 @@ import React from 'react';
 import { Dimensions } from 'react-native';
 import { Shadow } from 'react-native-shadow-2';
 
-import AccountMenu from '../pages/AccountMenu';
-import AssetList from '../pages/AssetList';
-import Exchange from '../pages/Exchange';
-import Receive from '../pages/Receive';
-import SettingsMenu from '../pages/SettingsMenu';
-import Wallet from '../pages/Wallet';
+import AssetList from '../screens/AssetList';
+import Exchange from '../screens/Exchange';
+import Receive from '../screens/Receive';
+import Wallet from '../screens/Wallet';
+import Explorers from '../screens/settings/Explorers';
+import LiquidityProviders from '../screens/settings/LiquidityProviders';
+import Network from '../screens/settings/Network';
+import SettingsMenu from '../screens/settings/SettingsMenu';
+import TorProxy from '../screens/settings/TorProxy';
+import AccountMenu from '../screens/settings/account/AccountMenu';
 import theme from '../styles/theme.style';
 
 import type {
@@ -35,13 +39,18 @@ const stackScreenOptions = {
   headerStyle: {
     backgroundColor: theme.HEADER_BACKGROUND_COLOR,
   },
+  headerTitleStyle: {
+    fontSize: theme.FONT_SIZE_L,
+    textTransform: 'uppercase',
+  },
   headerTintColor: theme.COLOR_TERTIARY,
-};
+} as const;
 
+// Override stackScreenOptions
 const mainScreenOptions = {
   headerTintColor: '#FFFFFF',
   headerTitleStyle: {
-    fontSize: theme.FONT_SIZE_XL,
+    fontSize: theme.FONT_SIZE_XXXL,
   },
 };
 
@@ -74,6 +83,14 @@ function SettingsStackComponent() {
     <SettingsStack.Navigator screenOptions={stackScreenOptions}>
       <SettingsStack.Screen name="Settings" component={SettingsMenu} options={mainScreenOptions} />
       <SettingsStack.Screen name="Account" component={AccountMenu} />
+      <SettingsStack.Screen
+        name="LiquidityProviders"
+        component={LiquidityProviders}
+        options={{ title: 'Tdex Providers' }}
+      />
+      <SettingsStack.Screen name="Explorers" component={Explorers} />
+      <SettingsStack.Screen name="Network" component={Network} />
+      <SettingsStack.Screen name="TorProxy" component={TorProxy} />
     </SettingsStack.Navigator>
   );
 }

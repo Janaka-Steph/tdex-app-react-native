@@ -24,6 +24,7 @@ export default {
   COLOR_PRIMARY_TRANSPARENT: '#0FFF001F', // 12% opacity
   //
   COLOR_SECONDARY: '#313131',
+  COLOR_SECONDARY_BIS: '#2d2d2d', // very slightly darker than secondary, used for background gradient
   COLOR_SECONDARY_SHADED: '#1a1a1a',
   COLOR_SECONDARY_TINTED: '#6e6e6e',
   //
