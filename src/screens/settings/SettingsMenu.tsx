@@ -16,18 +16,18 @@ const menu = {
   general: [
     { title: 'Account', selectedValue: undefined, link: 'Account' },
     { title: 'Liquidity providers', selectedValue: undefined, link: 'LiquidityProviders' },
-    { title: 'L-BTC unit', selectedValue: 'LBTC', link: 'WalletStack' },
-    { title: 'Default currency', selectedValue: 'EUR', link: 'WalletStack' },
+    { title: 'L-BTC unit', selectedValue: 'LBTC', link: undefined },
+    { title: 'Default currency', selectedValue: 'EUR', link: undefined },
     { title: 'Explorers endpoints', selectedValue: undefined, link: 'Explorers' },
     { title: 'Network', selectedValue: undefined, link: 'Network' },
     { title: 'Tor proxy endpoint', selectedValue: undefined, link: 'TorProxy' },
-    { title: 'Deep restoration', selectedValue: undefined, link: 'WalletStack' },
-    { title: 'Claim Liquid Bitcoin', selectedValue: undefined, link: 'WalletStack' },
+    { title: 'Deep restoration', selectedValue: undefined, link: 'DeepRestoration' },
+    { title: 'Claim Liquid Bitcoin', selectedValue: undefined, link: 'ClaimLiquidBitcoin' },
   ],
   support: [
-    { title: 'FAQ', selectedValue: undefined, link: 'WalletStack' },
-    { title: 'Privacy', selectedValue: undefined, link: 'WalletStack' },
-    { title: 'Terms & Conditions', selectedValue: undefined, link: 'WalletStack' },
+    { title: 'FAQ', selectedValue: undefined, link: 'Faq' },
+    { title: 'Privacy', selectedValue: undefined, link: 'Privacy' },
+    { title: 'Terms & Conditions', selectedValue: undefined, link: 'Terms' },
   ],
 };
 

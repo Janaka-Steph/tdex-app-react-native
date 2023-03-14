@@ -1,9 +1,5 @@
 import type React from 'react';
 
-import BtseIcon from '../assets/img/coins/btse.svg';
-import LbtcIcon from '../assets/img/coins/lbtc.svg';
-import LcadIcon from '../assets/img/coins/lcad.svg';
-import UsdtIcon from '../assets/img/coins/usdt.svg';
 import type { Asset } from '../stores/assetStore';
 import type { Currency } from '../stores/settingsStore';
 
@@ -175,26 +171,6 @@ export const TOAST_TIMEOUT_SUCCESS = 2000;
 export const TOAST_TIMEOUT_FAILURE = 2000;
 export const PIN_TIMEOUT_SUCCESS = 800;
 export const PIN_TIMEOUT_FAILURE = 2000;
-
-// featured assets map: from an asset hash, get local image path
-const featuredAssetsMap = new Map<string, React.FC>();
-featuredAssetsMap.set(LBTC_ASSET['liquid'].assetHash, LbtcIcon);
-featuredAssetsMap.set(LBTC_ASSET['testnet'].assetHash, LbtcIcon);
-featuredAssetsMap.set(LBTC_ASSET['regtest'].assetHash, LbtcIcon);
-featuredAssetsMap.set(USDT_ASSET['liquid'].assetHash, UsdtIcon);
-featuredAssetsMap.set(USDT_ASSET['testnet'].assetHash, UsdtIcon);
-featuredAssetsMap.set(LCAD_ASSET['liquid'].assetHash, LcadIcon);
-featuredAssetsMap.set(LCAD_ASSET['testnet'].assetHash, LcadIcon);
-featuredAssetsMap.set(BTSE_ASSET['liquid'].assetHash, BtseIcon);
-featuredAssetsMap.set(BTSE_ASSET['testnet'].assetHash, BtseIcon);
-
-// get asset icon path (with asset hash from mainnet)
-export function getAssetImagePath(assetHash: string): string | React.FC {
-  const localImagePath = featuredAssetsMap.get(assetHash);
-  console.log('localImagePath', localImagePath);
-  if (localImagePath) return localImagePath;
-  return `https://liquid.network/api/v1/asset/${assetHash}/icon`;
-}
 
 export const BASE_DERIVATION_PATH_MAINNET = "m/84'/1776'/0'";
 export const BASE_DERIVATION_PATH_MAINNET_LEGACY = "m/84'/0'/0'";

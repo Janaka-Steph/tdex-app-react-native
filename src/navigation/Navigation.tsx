@@ -11,9 +11,12 @@ import Exchange from '../screens/Exchange';
 import Receive from '../screens/Receive';
 import Wallet from '../screens/Wallet';
 import Explorers from '../screens/settings/Explorers';
+import Faq from '../screens/settings/Faq';
 import LiquidityProviders from '../screens/settings/LiquidityProviders';
 import Network from '../screens/settings/Network';
+import Privacy from '../screens/settings/Privacy';
 import SettingsMenu from '../screens/settings/SettingsMenu';
+import Terms from '../screens/settings/Terms';
 import TorProxy from '../screens/settings/TorProxy';
 import AccountMenu from '../screens/settings/account/AccountMenu';
 import theme from '../styles/theme.style';
@@ -86,11 +89,24 @@ function SettingsStackComponent() {
       <SettingsStack.Screen
         name="LiquidityProviders"
         component={LiquidityProviders}
-        options={{ title: 'Tdex Providers' }}
+        options={{ title: 'TDEX Providers' }}
       />
       <SettingsStack.Screen name="Explorers" component={Explorers} />
       <SettingsStack.Screen name="Network" component={Network} />
       <SettingsStack.Screen name="TorProxy" component={TorProxy} />
+      <SettingsStack.Screen name="DeepRestoration" component={TorProxy} />
+      <SettingsStack.Screen name="ClaimLiquidBitcoin" component={TorProxy} />
+      <SettingsStack.Screen name="Faq" component={Faq} />
+      <SettingsStack.Screen
+        name="Privacy"
+        component={Privacy}
+        options={{ title: 'Privacy Policy' }}
+      />
+      <SettingsStack.Screen
+        name="Terms"
+        component={Terms}
+        options={{ title: 'Terms & Conditions' }}
+      />
     </SettingsStack.Navigator>
   );
 }

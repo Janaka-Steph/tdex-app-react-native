@@ -45,6 +45,11 @@ export type SettingsStackNavigatorParamList = {
   Explorers: undefined;
   Network: undefined;
   TorProxy: undefined;
+  DeepRestoration: undefined;
+  ClaimLiquidBitcoin: undefined;
+  Faq: undefined;
+  Privacy: undefined;
+  Terms: undefined;
 };
 export type SettingsTabScreenProps<T extends keyof SettingsStackNavigatorParamList> =
   CompositeScreenProps<
