@@ -1,0 +1,3 @@
+# TDEX App (React Native version)
+
+Fork of https://github.com/tdex-network/tdex-app using React Native with Expo.
