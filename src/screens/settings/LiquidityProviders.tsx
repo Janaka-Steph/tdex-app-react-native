@@ -2,6 +2,7 @@ import { AntDesign, Ionicons } from '@expo/vector-icons';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
+import BigButton from '../../components/BigButton';
 import Shell from '../../components/Shell';
 import type { SettingsTabScreenProps } from '../../navigation/navigationTypes';
 import common from '../../styles/common.style';
@@ -24,26 +25,29 @@ const LiquidityProviders: React.FC<SettingsTabScreenProps<'LiquidityProviders'>>
           </TouchableOpacity>
         </View>
       ))}
-      <TouchableOpacity style={[common.buttonFullWidth, { marginTop: 20, marginBottom: 8 }]}>
-        <AntDesign
-          name="pluscircleo"
-          size={18}
-          color={theme.COLOR_PRIMARY}
-          onPress={() => console.log('setNewProvider')}
-          style={[common.buttonFullWidth.icon]}
-        />
-        <Text style={[common.buttonFullWidth.text]}>ADD PROVIDER</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={[common.buttonFullWidth]}>
-        <Ionicons
-          name="refresh-circle-outline"
-          size={22}
-          color={theme.COLOR_PRIMARY}
-          onPress={() => console.log('refresh')}
-          style={[common.buttonFullWidth.icon]}
-        />
-        <Text style={[common.buttonFullWidth.text]}>REFRESH</Text>
-      </TouchableOpacity>
+      <BigButton
+        text="ADD PROVIDER"
+        style={{ marginTop: 20, marginBottom: 8 }}
+        icon={
+          <AntDesign
+            name="pluscircleo"
+            size={18}
+            color={theme.COLOR_PRIMARY}
+            onPress={() => console.log('setNewProvider')}
+          />
+        }
+      />
+      <BigButton
+        text="REFRESH"
+        icon={
+          <Ionicons
+            name="refresh-circle-outline"
+            size={22}
+            color={theme.COLOR_PRIMARY}
+            onPress={() => console.log('refresh')}
+          />
+        }
+      />
     </Shell>
   );
 };

@@ -3,26 +3,6 @@ import { StyleSheet } from 'react-native';
 import theme from './theme.style';
 
 export default StyleSheet.create({
-  buttonFullWidth: {
-    alignItems: 'center',
-    backgroundColor: theme.COLOR_PRIMARY_TRANSPARENT,
-    borderColor: theme.COLOR_PRIMARY,
-    borderRadius: 40,
-    borderWidth: 1.5,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    padding: 20,
-    width: '100%',
-    //
-    icon: {
-      marginRight: 6,
-    },
-    text: {
-      color: theme.COLOR_PRIMARY,
-      fontFamily: theme.FONT_HEADING,
-      fontSize: theme.FONT_SIZE_L,
-    },
-  },
   headingContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -49,4 +29,13 @@ export default StyleSheet.create({
     padding: 16,
     width: '100%',
   },
-});
+  input: {
+    backgroundColor: theme.COLOR_SECONDARY,
+    borderRadius: 8,
+    color: theme.COLOR_TEXT,
+    marginTop: 50,
+    padding: 20,
+    width: '100%',
+  },
+  inputPlaceholder: { color: theme.COLOR_TERTIARY },
+} as const);

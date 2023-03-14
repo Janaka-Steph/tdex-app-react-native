@@ -10,6 +10,8 @@ import AssetList from '../screens/AssetList';
 import Exchange from '../screens/Exchange';
 import Receive from '../screens/Receive';
 import Wallet from '../screens/Wallet';
+import ClaimLiquidBitcoin from '../screens/settings/ClaimLiquidBitcoin';
+import DeepRestoration from '../screens/settings/DeepRestoration';
 import Explorers from '../screens/settings/Explorers';
 import Faq from '../screens/settings/Faq';
 import LiquidityProviders from '../screens/settings/LiquidityProviders';
@@ -93,9 +95,17 @@ function SettingsStackComponent() {
       />
       <SettingsStack.Screen name="Explorers" component={Explorers} />
       <SettingsStack.Screen name="Network" component={Network} />
-      <SettingsStack.Screen name="TorProxy" component={TorProxy} />
-      <SettingsStack.Screen name="DeepRestoration" component={TorProxy} />
-      <SettingsStack.Screen name="ClaimLiquidBitcoin" component={TorProxy} />
+      <SettingsStack.Screen name="TorProxy" component={TorProxy} options={{ title: 'Tor Proxy' }} />
+      <SettingsStack.Screen
+        name="DeepRestoration"
+        component={DeepRestoration}
+        options={{ title: 'Deep Restoration' }}
+      />
+      <SettingsStack.Screen
+        name="ClaimLiquidBitcoin"
+        component={ClaimLiquidBitcoin}
+        options={{ title: 'Claim Liquid Bitcoin' }}
+      />
       <SettingsStack.Screen name="Faq" component={Faq} />
       <SettingsStack.Screen
         name="Privacy"

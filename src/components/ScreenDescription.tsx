@@ -24,7 +24,8 @@ const styles = StyleSheet.create({
   description: {
     color: theme.COLOR_TEXT,
     fontFamily: theme.FONT_MAIN,
-    fontSize: theme.FONT_SIZE_MD,
+    fontSize: theme.FONT_SIZE_L,
+    lineHeight: 24,
   },
   title: {
     color: theme.COLOR_TEXT,

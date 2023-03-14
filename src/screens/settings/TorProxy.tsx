@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
 
+import BigButton from '../../components/BigButton';
 import Shell from '../../components/Shell';
 import common from '../../styles/common.style';
 import theme from '../../styles/theme.style';
@@ -16,11 +17,9 @@ const TorProxy: React.FC = () => {
         https://proxy.tdex.network as proxy. If you want to use your own, specify your proxy
         endpoint below.
       </Text>
-      <TextInput style={styles.input} onChangeText={onChangeText} value={text} />
+      <TextInput style={[common.input]} onChangeText={onChangeText} value={text} />
       <View style={{ width: '80%' }}>
-        <TouchableOpacity style={[common.buttonFullWidth, { marginTop: 40 }]}>
-          <Text style={[common.buttonFullWidth.text]}>SAVE ENDPOINT</Text>
-        </TouchableOpacity>
+        <BigButton text="SAVE ENDPOINT" style={{ marginTop: 40 }} />
       </View>
     </Shell>
   );
@@ -29,14 +28,6 @@ const TorProxy: React.FC = () => {
 export default TorProxy;
 
 const styles = StyleSheet.create({
-  input: {
-    backgroundColor: theme.COLOR_SECONDARY,
-    borderRadius: 8,
-    color: theme.COLOR_TEXT,
-    marginTop: 50,
-    padding: 20,
-    width: '100%',
-  },
   text: {
     color: theme.COLOR_TEXT,
     fontFamily: theme.FONT_MAIN,
